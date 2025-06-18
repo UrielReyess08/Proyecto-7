@@ -41,7 +41,22 @@
         <article>
           <h2>Nosotros</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam molestiae consequatur quisquam explicabo saepe impedit similique ea sunt aliquid odio eaque quidem dignissimos eius soluta voluptatibus necessitatibus deleniti, exercitationem dolorem!</p>
+          <p><a href="https://github.com/UrielReyess08" target="_blank" onclick="enviarEvento(event)">Uriel Reyes</a></p>
         </article>
       </div>
+
+      <script>
+        function enviarEvento(e){
+          e.preventDefault();
+          gtag('event', 'link', {
+            'debug_mode': 'true',
+            'event_label': 'github'
+          });
+          
+          setTimeout(function() {
+            window.location.href = e.target.href;
+          }, 300);
+      </script>
+
 </body>
 </html>
